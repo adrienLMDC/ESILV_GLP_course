@@ -1,0 +1,9 @@
+# TD1/9: Use basic Linux commands 
+
+## Exercise 1: Move around 
+
+    1. Go to the root directory 
+```
+$ cd /
+```
+
