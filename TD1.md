@@ -113,7 +113,7 @@ mv adrien_lemasne.txt adrien_lemasne_2023.txt
 
 9. Make a copy of this folder, name it notes_2023
 ```
-cp notes notes_2023
+cp notes notes_2023 -r
 ```
 
 10. Delete the first folder (notes) using the verbose option
