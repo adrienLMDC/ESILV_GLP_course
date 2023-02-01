@@ -72,22 +72,53 @@ $ pwd
 
 1. Go to your home directory (should be named after you, you might be
 there by default)
+```
+$ cd 
+```
 
 2. Check your current location
+```
+$ pwd
+```
 
 3. Create a folder linux_ex_1
+```
+$ mkdir linux_ex_1
+```
 
 4. Go into this folder
+```
+$ cd linux_ex_1
+```
 
 5. Create an empty text file named [first_name]_[last_name].txt (e.g. alexis_bogroff.txt)
+```
+$ touch adrien.lemasne.txt
+```
 
 6. Create a folder notes
+```
+$ mkdir notes
+```
 
 7. Move your text file into this folder
+```
+mv adrien_lemasne.txt notes
+```
 
 8. Rename the text file by appending the current year [first_name]_[last_name]_[current_year].txt
+```
+mv adrien_lemasne.txt adrien_lemasne_2023.txt
+```
 
-9. Make a copy of this folder, name it notes_2022
+9. Make a copy of this folder, name it notes_2023
+```
+cp notes notes_2023
+```
 
 10. Delete the first folder (notes) using the verbose option
 
+It didn't work with -v so I used -r
+```
+rm -r notes
+```
