@@ -66,3 +66,28 @@ $ cd test
 ```
 $ pwd
 ```  
+
+
+## Exercise 2: Create, Rename, copy, delete
+
+1. Go to your home directory (should be named after you, you might be
+there by default)
+
+2. Check your current location
+
+3. Create a folder linux_ex_1
+
+4. Go into this folder
+
+5. Create an empty text file named [first_name]_[last_name].txt (e.g. alexis_bogroff.txt)
+
+6. Create a folder notes
+
+7. Move your text file into this folder
+
+8. Rename the text file by appending the current year [first_name]_[last_name]_[current_year].txt
+
+9. Make a copy of this folder, name it notes_2022
+
+10. Delete the first folder (notes) using the verbose option
+
