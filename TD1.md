@@ -235,3 +235,55 @@ Write :wq + Enter to save and exit
 ```
 $ cat credentials.txt
 ```
+
+On the same file :
+
+1. Add the execute permission to the owner
+  (a) Display the new permissions
+```
+$ chmod u+x credentials.txt
+$ ls -la
+```
+
+2. Remove the read permission to other users
+  (a) Display the new permissions
+```
+$ chmod o-r credentials.txt
+$ ls -la
+```
+
+3. Change the permissions to read, write and execute for all users
+  (a) Display the new permissions
+```
+$ chmod ugo=rwx credentials.txt
+$ ls -la
+```
+
+### Exercise 4:.2 Access root files
+
+1. Go to the root folder
+```
+$ cd /
+```
+
+2. Create a file in root user mode named .private_file
+  (a) Write some information in the file
+
+  (b) Display the file content
+  
+  (c) Display all the files in the folder including hidden files
+
+3. Modify the file in normal user mode  
+  (a) Write some new information in the file
+  
+  (b) Display the file content
+
+4. Modify the file in root user mode
+  (a) Write some new information in the file
+
+  (b) Display the file content
+
+5. Change permissions to read, write and execute for all users
+  (a) Modify the file content in normal user mode
+
+  (b) Display the file content
