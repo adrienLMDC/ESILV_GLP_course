@@ -223,7 +223,12 @@ $ ls -la credentials.txt
   
   (b) Modify and save the file
 ```
-$ echo "Modified file" > credentials.txt
+$ vi credentials.txt 
+
+press i to access the insertion mode. 
+Write what you want
+Press Esc to access the normal mode
+Write :wq + Enter to save and exit
 ```
 
   (c) Display the file content
