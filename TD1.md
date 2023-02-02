@@ -158,3 +158,75 @@ $ chmod +x script_1.sh
 $ ./script_1.sh
 ```
 
+## Exercise 4: Accessing or modifying a file : permissions and root privilege
+
+### Exercise 4:.1 Change the rights for accessing or modifying a file  
+
+1. Create a file credentials in the folder linux_ex_1
+  (a) Write any kind of (fake) personal information within the file
+```
+$ touch credentials.txt 
+$ echo "Je suis né en Novembre" > credentials.txt
+```
+
+  (b) Display the file content
+```
+$ cat credentials.txt
+```
+  
+  (c) Display the current permissions
+```
+$ ls -lah credentials.txt
+```
+
+2. Change the current permissions to : read only for all users
+
+Notes for myself
+The output of ls -la filename shows the permission. The first character indicates if it is a file (-), a directory (d) or a link (l)
+Then it is followed by r or w or x or a combinaison of those, it indicates the rights of the owner
+
+To change directory permissions for everyone, use “u” for users, “g” for group, “o” for others, and “ugo” or “a” (for all).
+
+There are three kinds of file permissions in Linux:
+  Read (r): Allows a user or group to view a file.
+  Write (w): Permits the user to write or modify a file or directory.
+  Execute (x): A user or grup with execute permissions can execute a file or view a directory.
+  
+For example : 
+  chmod ugo+rwx foldername to give read, write, and execute to everyone.
+  chmod a=r foldername to give only read permission for everyone.
+  ...
+  
+  (a) Display the new permissions
+```
+$ chmod a=r credentials.txt
+$ ls -lah credentials.txt
+```
+
+  (b) Modify and save the file
+```
+$ echo "Modified file" > credentials.txt
+```
+*Permission denied
+  
+  (c) Display the file content
+```
+$ vim credentials.txt
+```
+
+3. Change the permissions back to read and write for all users  
+  (a) Display the new permissions
+```
+$ chmod ugo+rw credentials.txt
+$ ls -la credentials.txt
+```
+  
+  (b) Modify and save the file
+```
+$ echo "Modified file" > credentials.txt
+```
+
+  (c) Display the file content
+```
+$ cat credentials.txt
+```
