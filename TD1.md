@@ -266,24 +266,51 @@ $ ls -la
 $ cd /
 ```
 
-2. Create a file in root user mode named .private_file
+2. Create a file in root user mode named .private_file  
   (a) Write some information in the file
+```
+$ sudo -i
+$ touch .private_file
+$ echo "It is a private file" > .private_file
+```
 
   (b) Display the file content
-  
-  (c) Display all the files in the folder including hidden files
+```
+$ cat .private_file
+```
+
+  (c) Display all the files in the folder including hidden files  
+```
+$ ls -a
+```
 
 3. Modify the file in normal user mode  
   (a) Write some new information in the file
-  
   (b) Display the file content
+  
+*It is impossible to modify or display the file content in user mode. We also can not change the rights in user mode, we might have to do it in root mode.
 
 4. Modify the file in root user mode
   (a) Write some new information in the file
-
+```
+echo "New line" >> .private_file
+```
   (b) Display the file content
+```
+$ cat .private_file
+```  
 
 5. Change permissions to read, write and execute for all users
+```
+$ cd ..
+$ chmod a=rwx root
+```
   (a) Modify the file content in normal user mode
-
+```
+$ echo "Hey" >> .private_file
+```  
+  
   (b) Display the file content
+```
+$ cat private_file
+```
