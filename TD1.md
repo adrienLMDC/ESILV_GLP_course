@@ -314,3 +314,141 @@ $ echo "Hey" >> .private_file
 ```
 $ cat private_file
 ```
+
+## Exercise 4:.3 Change a file owner  
+
+1. Change permissions of .private_file to read and write for all users, in normal user mode  
+
+*It is not possible to change the permissions of this file as in normal mode, I am not the owner of root
+
+2. Set the new file owner as the current user  
+```
+$ sudo -i
+$ cd /
+$ chown adrien root
+```  
+
+3. Change permissions of .private_file to read and write for all users, in normal user mode
+```
+$ su adrien
+$ chmod a=rw root
+```
+
+## Exercise 4:.4 Manage Packages (tools / functions)  
+
+1. Update your main package manager named apt  
+```
+$ sudo apt update
+```
+
+2. Upgrade apt
+```
+$ sudo apt upgrade
+```
+
+3. Install the package cmatrix
+```
+$ sudo apt-get install cmatrix
+```
+
+4. Launch cmatrix
+```
+$ cmatrix
+```
+
+5. Quit cmatrix
+```
+CTRL + C
+```
+
+6. Install the package tmux
+```
+$ sudo apt-get install tmux
+```
+
+7. Launch tmux
+```
+$ tmux
+```
+
+8. Say "Hello session 0" using bash in your current tmux session
+```
+$ echo "Hello session 0"
+```
+
+9. Launch cmatrix in your current tmux session
+```
+$ cmatrix
+```
+
+10. Detach from the current tmux session (without stopping cmatrix)
+```
+CTRL + B    D
+```
+
+11. Create a new tmux session
+```
+$ tmux new -s MySes
+```
+
+12. Say "Hello session 1" using bash in your new tmux session
+```
+$ nano script_tmux.sh
+
+Ouverture du fichier bash :
+#!/bin/bash
+
+echo "Hello session 0"
+
+Fermeture fichier
+
+$ chmod +x script_tmux.sh
+$ ./script_tmux.sh
+```
+
+13. Detach from the current tmux session
+```
+$ tmux detach
+```
+
+14. List all running sessions
+```
+$ tmux ls
+```
+
+15. Attach again to session 0
+```
+$ tmux attach -t 0
+```
+
+16. Detach again
+```
+$ tmux detach 
+```
+
+17. Attach again to session 1
+```
+$ tmux attach -t MySes
+```
+
+18. Detach again
+```
+$ tmux detach
+```
+
+19. List all running sessions
+```
+$ tmux ls
+```
+
+20. Kill all tmux sessions and quit tmux
+```
+$ tmux kill-session -a
+$ tmux kill-server
+```
+
+21. List all sessions
+```
+$ tmux ls
+```
+*No servers running
