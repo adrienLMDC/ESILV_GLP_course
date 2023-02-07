@@ -373,7 +373,17 @@ $ tmux
 
 8. Say "Hello session 0" using bash in your current tmux session
 ```
-$ echo "Hello session 0"
+$ nano script_tmux0.sh
+
+Ouverture du fichier bash :
+#!/bin/bash
+
+echo "Hello session 0"
+
+Fermeture fichier
+
+$ chmod +x script_tmux0.sh
+$ ./script_tmux0.sh```
 ```
 
 9. Launch cmatrix in your current tmux session
@@ -398,7 +408,7 @@ $ nano script_tmux.sh
 Ouverture du fichier bash :
 #!/bin/bash
 
-echo "Hello session 0"
+echo "Hello session 1"
 
 Fermeture fichier
 
@@ -451,4 +461,46 @@ $ tmux kill-server
 ```
 $ tmux ls
 ```
-*No servers running
+No servers running  
+
+## Exercise 4:.5 Use functions arguments / parameters  
+
+1. Display the cmatrix help function  
+```
+$ cmatrix --help
+```
+
+2. Launch cmatrix and make it display white characters (in place of the green)
+```
+$ cmatrix -C white
+```
+3. Re-launch cmatrix and slow down the speed of characters actualization
+```
+$ cmatrix -u 10
+```
+
+4. Stop cmatrix
+CTRL + C
+
+5. Launch cmatrix with both :
+— A slow speed of characters actualization
+— Blue characters
+
+```
+$ cmatrix -u 10 -C blue
+```
+
+6. Display cmatrix manual (different from the help notice)
+```
+$ man cmatrix
+```
+
+7. Display the tmux help function
+```
+$ tmux --help
+```
+
+8. Display the tmux manual
+```
+$ man tmux
+```
